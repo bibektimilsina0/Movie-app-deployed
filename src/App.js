@@ -1,24 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
-
+import Home from "./Home.js"
+import { Route,Routes,BrowserRouter} from "react-router-dom";
+import FullDesc from "./FullDesc.js";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          BIbek timilsina
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-        deploy practice
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+    <Routes>
+    <Route index element={<Home></Home>}></Route>
+    {/* <Route path="/Movieappinreact">{<Home/>}</Route> */}
+    <Route path="/about" element={<FullDesc></FullDesc>}></Route>
+    </Routes>
+     </BrowserRouter>
+    // <div className="">
+    //  <Home/>
+      
+    // </div>
   );
 }
 
